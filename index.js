@@ -11,6 +11,17 @@ app.get('/', (req, res) => {
     //     <h2>Welcome to SBA 318!</h2>`);
 });
 
+//GET all Cartoon Character data
+app.get('/cartoons', (req, res) => {
+    console.log('Cartoons Route Reached');
+    res.send(cartoonChars);
+});
+
+// GET specific character data with corresponding ID
+app.get('/cartoons/:id', (req, res) => {
+    let filteredChars = cartoonChars.filter((cc) => cc.id == req.params.id)
+    res.send(filteredChars)
+})
 
 
 
