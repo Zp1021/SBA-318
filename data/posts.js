@@ -32,7 +32,7 @@ const posts = [
     {
         id: 6,
         userId: 3,
-        title: "Bacon",
+        title: "Bacon Pancakes jingle",
         content: "Pancakes, makin bacon pancakes, take some bacon then I'll put it in a pancake",
     },
     {
@@ -61,4 +61,4 @@ const posts = [
     }
 ];
 
-module.exports = posts;
+export default posts;
