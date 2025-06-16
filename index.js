@@ -103,9 +103,7 @@ app
         let char = cartoonChars.find((cc) => cc.id == req.params.id)
         let update = req.body
         for (let key in update) {
-            if (char[key] !== undefined) {
-                char[key] = update[key]
-            }
+            char[key] = update[key]
         }
         res.send(char);
     })
