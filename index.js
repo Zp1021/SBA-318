@@ -40,7 +40,7 @@ app
     
 
 app
-    // Get Posts related to cartoon characters
+     // Get Posts related to cartoon characters
     .get('/cartoons/posts', (req, res) => {
         console.log('Cartoon posts reached')
         res.send(posts);
@@ -53,6 +53,17 @@ app
         res.send(filteredChars)
     })
 
+    // PATCH request to update character information
+    .patch('/cartoons/:id', (req, res) => {
+        let char = cartoonChars.find((cc) => cc.id == req.params.id)
+        let update = req.body
+        for (let key in update) {
+            if(char[key] !== undefined) {
+                char[key] = update[key]
+            }
+        }
+        res.send(char);
+    })
 
 app.listen(PORT, () => {
     console.log(`Server running on port: ${PORT}`);
