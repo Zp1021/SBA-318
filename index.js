@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
         <br>
         If you want to see an example greeting and make your own open
         <br>
-        thunder client and click <a href = "/cartoons/comments">here</a>`);
+        thunder client and click <a href = "/cartoons/greetings">here</a>`);
 });
 
 app

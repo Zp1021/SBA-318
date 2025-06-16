@@ -72,4 +72,3 @@ Note: This is not a test of design; it is a test of serving static files using E
 18. Include a README file that contains a description of your application.
 
 19. Level of effort displayed in creativity, presentation, and user experience.
-
