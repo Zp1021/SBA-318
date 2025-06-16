@@ -65,6 +65,15 @@ app
         res.send(char);
     })
 
+    // DELETE request made to character specified by ID
+    .delete('/cartoons/:id', (req, res) => {
+        let char = cartoonChars.findIndex((cc) => cc.id == req.params.id)
+        cartoonChars.splice(char, 1)
+        res.send(char)
+    })
+
+
+
 app.listen(PORT, () => {
     console.log(`Server running on port: ${PORT}`);
 });
